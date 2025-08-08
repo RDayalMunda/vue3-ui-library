@@ -1,7 +1,8 @@
 <template>
   <div class="rdm-input-container">
-    <label class="rdm-input-label">{{ label }}</label>
+    <label class="rdm-input-label" :for="inputId">{{ label }}</label>
     <input
+      :id="inputId"
       class="rdm-input"
       :type="type"
       :placeholder="placeholder"
@@ -13,7 +14,13 @@
 </template>
 
 <script setup>
+import { computed, useId } from 'vue'
+
 const props = defineProps({
+  id: {
+    type: String,
+    default: '',
+  },
   label: {
     type: String,
     default: '',
@@ -35,6 +42,12 @@ const props = defineProps({
     default: 'text',
   },
 })
+
+const emit = defineEmits(['update:modelValue'])
+
+const uniqueId = useId()
+
+const inputId = computed(() => props.id || uniqueId)
 
 function updateValue(event) {
   emit('update:modelValue', event.target.value)
