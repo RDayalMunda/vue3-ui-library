@@ -1,3 +1,4 @@
+import './assets/main.css'
 import RdmInput from './components/RdmInput.vue'
 import RdmButton from './components/RdmButton.vue'
 
