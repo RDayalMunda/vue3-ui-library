@@ -1,6 +1,6 @@
 {
   "name": "@ramdayalmunda/vue3-ui-library",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
