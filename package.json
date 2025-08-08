@@ -1,6 +1,6 @@
 {
   "name": "@ramdayalmunda/vue3-ui-library",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
@@ -21,6 +21,7 @@
       "require": "./dist/index.umd.js"
     }
   },
+  "style": "dist/vue3-ui-library.css",
   "files": [
     "dist"
   ],
