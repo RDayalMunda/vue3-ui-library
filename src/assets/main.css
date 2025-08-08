@@ -1,0 +1,16 @@
+.rdm-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rdm-input-container > .rdm-input-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rdm-input-container > .rdm-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
