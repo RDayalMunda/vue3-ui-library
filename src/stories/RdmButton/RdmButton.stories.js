@@ -8,12 +8,22 @@ export default {
 }
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const DefaultActive = {
+export const Active = {
   args: {
     text: 'Click me',
     disabled: false,
     clickHandler: () => {
       alert('clicked')
+    },
+  },
+}
+
+export const Disabled = {
+  args: {
+    text: 'Click me',
+    disabled: true,
+    clickHandler: () => {
+      alert('This wont be alerted')
     },
   },
 }

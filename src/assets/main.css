@@ -1,17 +1,2 @@
 @import '../stories/RdmButton/RdmButton.css';
-
-.rdm-input-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.rdm-input-container > .rdm-input-label {
-  color: #000000;
-}
-
-.rdm-input-container > .rdm-input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+@import '../stories/RdmInput/RdmInput.css';

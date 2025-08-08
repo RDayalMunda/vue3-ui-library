@@ -1,5 +1,5 @@
 import './assets/main.css'
-import RdmInput from './components/RdmInput.vue'
+import RdmInput from './stories/RdmInput/RdmInput.vue'
 import RdmButton from './stories/RdmButton/RdmButton.vue'
 
 export { RdmInput, RdmButton }
