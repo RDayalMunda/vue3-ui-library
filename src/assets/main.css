@@ -1,4 +1,4 @@
-@import '../stories/RdmButton.css';
+@import '../stories/RdmButton/RdmButton.css';
 
 .rdm-input-container {
   display: flex;
