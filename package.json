@@ -1,5 +1,5 @@
 {
-  "name": "rdm-vue3-ui-library-2",
+  "name": "@ramdayalmunda/vue3-ui-library",
   "version": "0.0.1",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"

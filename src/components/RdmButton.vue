@@ -5,29 +5,29 @@
   </button>
 </template>
 
-<script setup>
-defineOptions({
+<script>
+export default {
   name: 'RdmButton',
-})
-
-const props = defineProps({
-  text: {
-    type: String,
-    default: '',
+  props: {
+    text: {
+      type: String,
+      default: '',
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    clickHandler: {
+      type: Function,
+      default: () => {},
+    },
   },
-  disabled: {
-    type: Boolean,
-    default: false,
+  methods: {
+    handleClick() {
+      if (typeof this.clickHandler === 'function' && !this.disabled) {
+        this.clickHandler()
+      }
+    },
   },
-  clickHandler: {
-    type: Function,
-    default: () => {},
-  },
-})
-
-const handleClick = () => {
-  if (typeof props.clickHandler === 'function' && !props.disabled) {
-    props.clickHandler()
-  }
 }
 </script>

@@ -15,6 +15,6 @@ import { ref } from 'vue'
 
 const name = ref('')
 function handleClick() {
-  console.log('clicked', name.value)
+  alert('clicked: ' + name.value)
 }
 </script>

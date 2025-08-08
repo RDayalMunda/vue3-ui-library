@@ -1,8 +1,8 @@
 <template>
-  <div class="rdm-input-container">
-    <label class="rdm-input-label" :for="inputId">{{ label }}</label>
+  <label class="rdm-input-container">
+    <div class="rdm-input-label">{{ label }}</div>
     <input
-      :id="inputId"
+      :id="id"
       class="rdm-input"
       :type="type"
       :placeholder="placeholder"
@@ -10,50 +10,43 @@
       :value="modelValue"
       @input="updateValue"
     />
-  </div>
+  </label>
 </template>
 
-<script setup>
-import { computed, useId } from 'vue'
-
-defineOptions({
+<script>
+export default {
   name: 'RdmInput',
-})
-
-const props = defineProps({
-  id: {
-    type: String,
-    default: '',
+  emits: ['update:modelValue'],
+  props: {
+    id: {
+      type: String,
+      default: '',
+    },
+    label: {
+      type: String,
+      default: '',
+    },
+    placeholder: {
+      type: String,
+      default: '',
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    modelValue: {
+      type: String,
+      default: '',
+    },
+    type: {
+      type: String,
+      default: 'text',
+    },
   },
-  label: {
-    type: String,
-    default: '',
+  methods: {
+    updateValue(event) {
+      this.$emit('update:modelValue', event.target.value)
+    },
   },
-  placeholder: {
-    type: String,
-    default: '',
-  },
-  disabled: {
-    type: Boolean,
-    default: false,
-  },
-  modelValue: {
-    type: String,
-    default: '',
-  },
-  type: {
-    type: String,
-    default: 'text',
-  },
-})
-
-const emit = defineEmits(['update:modelValue'])
-
-const uniqueId = useId()
-
-const inputId = computed(() => props.id || uniqueId)
-
-function updateValue(event) {
-  emit('update:modelValue', event.target.value)
 }
 </script>
