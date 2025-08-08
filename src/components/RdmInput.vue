@@ -16,6 +16,10 @@
 <script setup>
 import { computed, useId } from 'vue'
 
+defineOptions({
+  name: 'RdmInput',
+})
+
 const props = defineProps({
   id: {
     type: String,

@@ -6,6 +6,10 @@
 </template>
 
 <script setup>
+defineOptions({
+  name: 'RdmButton',
+})
+
 const props = defineProps({
   text: {
     type: String,
