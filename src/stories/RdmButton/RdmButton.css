@@ -1,0 +1,23 @@
+.rdm-button {
+  gap: 10px;
+  padding: 10px;
+  background-color: #32516e;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.rdm-button-text {
+  color: #fff;
+}
+.rdm-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.rdm-button:not(disabled):hover:active {
+  transform: scale(0.98);
+}
+.rdm-button:not(disabled):hover {
+  box-shadow: 0px -2px 13px 0px rgba(0, 0, 0, 0.5);
+}

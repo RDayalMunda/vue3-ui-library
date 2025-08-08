@@ -10,7 +10,7 @@
 
 <script setup>
 import RdmInput from './components/RdmInput.vue'
-import RdmButton from './components/RdmButton.vue'
+import RdmButton from './stories/RdmButton/RdmButton.vue'
 import { ref } from 'vue'
 
 const name = ref('')
