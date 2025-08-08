@@ -11,7 +11,7 @@
 .rdm-input-container > .rdm-input {
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .rdm-button {
@@ -19,7 +19,7 @@
   padding: 10px;
   background-color: #32516e;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }

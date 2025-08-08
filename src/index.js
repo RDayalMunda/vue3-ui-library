@@ -1,4 +1,4 @@
-import './index.css' // picks from current directory after being built
+import './assets/main.css'
 import RdmInput from './components/RdmInput.vue'
 import RdmButton from './components/RdmButton.vue'
 
