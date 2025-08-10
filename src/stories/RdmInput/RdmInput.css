@@ -1,25 +1,45 @@
+:root {
+  --rdm-active-color: #35a3ff;
+  --rdm-background-color: #f0f0f0;
+  --rdm-border-radius: 5px;
+  --rdm-focus-outline-width: 2px;
+  --rdm-focus-box-shadow-width: 3px;
+  --rdm-input-padding: 10px;
+}
 .rdm-input-label-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--rdm-input-padding);
 }
 
 .rdm-input-label-container .rdm-input-label {
   color: #000000;
 }
 
-.rdm-input-label-container .rdm-input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
 .rdm-input-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--rdm-input-padding);
+  background-color: var(--rdm-background-color);
+  border-radius: var(--rdm-border-radius);
+}
+.rdm-input-container > .rdm-input:focus {
+  outline: none;
+}
+
+.rdm-input-container:has(.rdm-input:focus) {
+  outline: var(--rdm-focus-outline-width) solid var(--rdm-active-color);
+  box-shadow: 0 0 0 var(--rdm-focus-box-shadow-width) var(--rdm-background-color);
+}
+
+.rdm-input-container .rdm-input {
+  padding: var(--rdm-input-padding);
+  border: none;
+  width: 100%;
+  background: none;
 }
 
 .rdm-input-password-toggle {
   cursor: pointer;
+  margin-right: var(--rdm-input-padding);
 }
