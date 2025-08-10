@@ -27,3 +27,43 @@ export const Disabled = {
     },
   },
 }
+
+export const SecondaryButton = {
+  args: {
+    text: 'Secondary Button',
+    disabled: false,
+    variant: 'secondary',
+  },
+}
+
+export const DangerButton = {
+  args: {
+    text: 'Danger Button',
+    disabled: false,
+    variant: 'danger',
+  },
+}
+
+export const SuccessButton = {
+  args: {
+    text: 'Success Button',
+    disabled: false,
+    variant: 'success',
+  },
+}
+
+export const WarningButton = {
+  args: {
+    text: 'Warning Button',
+    disabled: false,
+    variant: 'warning',
+  },
+}
+
+export const InfoButton = {
+  args: {
+    text: 'Info Button',
+    disabled: false,
+    variant: 'info',
+  },
+}
