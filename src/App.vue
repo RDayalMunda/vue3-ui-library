@@ -1,19 +1,20 @@
 <template>
   <div class="main-container">
     <h1>Hellow World</h1>
-    <pre class="models">
+    <div class="container">
+      <pre class="models">
 name = {{ name }}
 password = {{ password }}
-    </pre>
-    <div class="container">
+    </pre
+      >
       <RdmInput v-model="name" label="Name" placeholder="Enter your name" />
-      <RdmInput label="Email" placeholder="You can't type here" disabled />
       <RdmInput
         v-model="password"
         label="Password"
         placeholder="Enter your password"
         type="password"
       />
+
       <RdmButton text="Click me" :clickHandler="handleClick" />
       <RdmButton text="Can't click me" :disabled="true" />
     </div>
@@ -29,6 +30,14 @@ const name = ref('')
 const password = ref('')
 function handleClick() {
   console.log('clicked: ', name.value, password.value)
+}
+
+function focusHandler() {
+  console.log('focus')
+}
+
+function blurHandler() {
+  console.log('blur')
 }
 </script>
 <style scoped>

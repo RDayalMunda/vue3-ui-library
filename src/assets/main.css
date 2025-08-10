@@ -8,4 +8,11 @@
   --rdm-focus-outline-width: 2px;
   --rdm-focus-box-shadow-width: 3px;
   --rdm-box-shadow-hover: 0px 5px 13px 0px rgba(0, 0, 0, 0.5);
+
+  --rdm-primary-color: #185fa2;
+  --rdm-secondary-color: #e0eaee;
+  --rdm-danger-color: #b31717;
+  --rdm-success-color: #2ea232;
+  --rdm-warning-color: #ed7016;
+  --rdm-info-color: #7d9db7;
 }

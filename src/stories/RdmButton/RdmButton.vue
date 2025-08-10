@@ -1,5 +1,5 @@
 <template>
-  <button class="rdm-button" :disabled="disabled" @click="handleClick">
+  <button class="rdm-button" :disabled="disabled" @click="handleClick" :variant="variant">
     <span class="rdm-button-text" v-if="text">{{ text }}</span>
     <slot v-else />
   </button>
@@ -20,6 +20,12 @@ export default {
     clickHandler: {
       type: Function,
       default: () => {},
+    },
+    variant: {
+      type: String,
+      default: 'primary',
+      validator: (value) =>
+        ['primary', 'secondary', 'danger', 'success', 'warning', 'info'].includes(value),
     },
   },
   methods: {

@@ -1,7 +1,7 @@
 .rdm-button {
   gap: 10px;
   padding: 10px;
-  background-color: #32516e;
+  background-color: var(--rdm-primary-color);
   border: 1px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
@@ -11,7 +11,6 @@
   outline: var(--rdm-focus-outline-width) solid var(--rdm-active-color);
   box-shadow: 0 0 0 var(--rdm-focus-box-shadow-width) var(--rdm-background-color);
 }
-
 .rdm-button-text {
   color: #fff;
 }
@@ -23,5 +22,30 @@
   transform: scale(0.98);
 }
 .rdm-button:not(:disabled):hover {
-  box-shadow: var(--rdm-box-shadow-hover);
+  outline: var(--rdm-focus-outline-width) solid var(--rdm-active-color-hover);
+}
+
+/* variants */
+.rdm-button[variant='secondary'] {
+  background-color: var(--rdm-secondary-color);
+  color: #000;
+}
+.rdm-button[variant='secondary'] .rdm-button-text {
+  color: #000;
+}
+
+.rdm-button[variant='danger'] {
+  background-color: var(--rdm-danger-color);
+}
+
+.rdm-button[variant='success'] {
+  background-color: var(--rdm-success-color);
+}
+
+.rdm-button[variant='warning'] {
+  background-color: var(--rdm-warning-color);
+}
+
+.rdm-button[variant='info'] {
+  background-color: var(--rdm-info-color);
 }

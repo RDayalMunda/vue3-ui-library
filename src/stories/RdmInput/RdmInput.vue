@@ -10,7 +10,15 @@
         :placeholder="placeholder"
         :disabled="disabled"
         :value="modelValue"
-        @input="updateValue"
+        @input="inputEvent"
+        @change="(e) => emitEventHandler(e, 'change')"
+        @blur="(e) => emitEventHandler(e, 'blur')"
+        @focus="(e) => emitEventHandler(e, 'focus')"
+        @keydown="(e) => emitEventHandler(e, 'keydown')"
+        @keyup="(e) => emitEventHandler(e, 'keyup')"
+        @keypress="(e) => emitEventHandler(e, 'keypress')"
+        @paste="(e) => emitEventHandler(e, 'paste')"
+        @copy="(e) => emitEventHandler(e, 'copy')"
       />
       <div v-if="isPassword" class="rdm-input-password-toggle" @click="togglePasswordVisibility">
         {{ passwordText }}
@@ -22,7 +30,18 @@
 <script>
 export default {
   name: 'RdmInput',
-  emits: ['update:modelValue'],
+  emits: [
+    'update:modelValue',
+    'input',
+    'change',
+    'blur',
+    'focus',
+    'keydown',
+    'keyup',
+    'keypress',
+    'paste',
+    'copy',
+  ],
   props: {
     id: {
       type: String,
@@ -70,11 +89,15 @@ export default {
     },
   },
   methods: {
-    updateValue(event) {
+    inputEvent(event) {
       this.$emit('update:modelValue', event.target.value)
+      this.emitEventHandler(event, 'input')
     },
     togglePasswordVisibility() {
       this.isPasswordVisible = !this.isPasswordVisible
+    },
+    emitEventHandler(e, emitName) {
+      this.$emit(emitName, e)
     },
   },
 }
