@@ -1,2 +1,11 @@
 @import '../stories/RdmButton/RdmButton.css';
 @import '../stories/RdmInput/RdmInput.css';
+
+:root {
+  --rdm-active-color: #35a3ff;
+  --rdm-active-color-hover: #33a3ffcc;
+  --rdm-border-radius: 5px;
+  --rdm-focus-outline-width: 2px;
+  --rdm-focus-box-shadow-width: 3px;
+  --rdm-box-shadow-hover: 0px 5px 13px 0px rgba(0, 0, 0, 0.5);
+}

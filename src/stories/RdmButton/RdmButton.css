@@ -7,6 +7,10 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+.rdm-button:focus {
+  outline: var(--rdm-focus-outline-width) solid var(--rdm-active-color);
+  box-shadow: 0 0 0 var(--rdm-focus-box-shadow-width) var(--rdm-background-color);
+}
 
 .rdm-button-text {
   color: #fff;
@@ -19,5 +23,5 @@
   transform: scale(0.98);
 }
 .rdm-button:not(:disabled):hover {
-  box-shadow: 0px -2px 13px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--rdm-box-shadow-hover);
 }

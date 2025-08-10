@@ -1,9 +1,5 @@
 :root {
-  --rdm-active-color: #35a3ff;
   --rdm-background-color: #f0f0f0;
-  --rdm-border-radius: 5px;
-  --rdm-focus-outline-width: 2px;
-  --rdm-focus-box-shadow-width: 3px;
   --rdm-input-padding: 10px;
 }
 .rdm-input-label-container {
@@ -23,6 +19,13 @@
   background-color: var(--rdm-background-color);
   border-radius: var(--rdm-border-radius);
 }
+.rdm-input-container:has(.rdm-input:disabled) {
+  opacity: 0.5;
+}
+.rdm-input-container:hover:has(.rdm-input:not(:disabled)) {
+  outline: var(--rdm-focus-outline-width) solid var(--rdm-active-color-hover);
+}
+
 .rdm-input-container > .rdm-input:focus {
   outline: none;
 }

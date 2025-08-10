@@ -7,6 +7,7 @@ password = {{ password }}
     </pre>
     <div class="container">
       <RdmInput v-model="name" label="Name" placeholder="Enter your name" />
+      <RdmInput label="Email" placeholder="You can't type here" disabled />
       <RdmInput
         v-model="password"
         label="Password"
@@ -14,6 +15,7 @@ password = {{ password }}
         type="password"
       />
       <RdmButton text="Click me" :clickHandler="handleClick" />
+      <RdmButton text="Can't click me" :disabled="true" />
     </div>
   </div>
 </template>
@@ -35,7 +37,7 @@ function handleClick() {
   padding-right: 50px;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #4a4a4a;
+  background-color: #ffffff;
 }
 .models {
   display: flex;
