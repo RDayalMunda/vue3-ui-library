@@ -2,28 +2,27 @@
   <div class="main-container">
     <h1>Hellow World</h1>
     <div class="container">
-      <pre class="models">
-name = {{ name }}
-password = {{ password }}
-    </pre
-      >
-      <RdmInput v-model="name" label="Name" placeholder="Enter your name" />
-      <RdmInput
-        v-model="password"
-        label="Password"
-        placeholder="Enter your password"
-        type="password"
-      />
-
-      <RdmButton text="Click me" :clickHandler="handleClick" />
-      <RdmButton text="Can't click me" :disabled="true" />
+      <pre class="models"></pre>
+      <RdmButtonGroup :isDisabledAll="false">
+        <RdmButton text="First Button" :clickHandler="handleClick" />
+        <RdmButton text="Second Button" :clickHandler="handleClick" variant="success" />
+        <RdmButton text="Third Button" :clickHandler="handleClick" variant="danger" />
+        <RdmButton
+          text="Fourth Button"
+          :clickHandler="handleClick"
+          variant="danger"
+          :disabled="true"
+        />
+        <RdmButton text="Fifth Button" :clickHandler="handleClick" variant="warning" />
+        <RdmButton text="Sixth Button" :clickHandler="handleClick" variant="info" />
+      </RdmButtonGroup>
     </div>
   </div>
 </template>
 
 <script setup>
-import RdmInput from './stories/RdmInput/RdmInput.vue'
 import RdmButton from './stories/RdmButton/RdmButton.vue'
+import RdmButtonGroup from './stories/RdmButtonGroup/RdmButtonGroup.vue'
 import { ref } from 'vue'
 
 const name = ref('')

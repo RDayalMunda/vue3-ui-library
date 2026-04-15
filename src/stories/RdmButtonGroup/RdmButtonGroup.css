@@ -1,0 +1,26 @@
+.rdm-button-group {
+  display: flex;
+  flex-direction: column;
+}
+.rdm-button-group-fieldset {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+  border-radius: var(--rdm-border-radius);
+  border: none;
+  outline: none;
+}
+
+.rdm-button-group-fieldset .rdm-button {
+  border-radius: 0;
+}
+.rdm-button-group-fieldset .rdm-button:first-child:not(:last-child) {
+  border-top-left-radius: var(--rdm-border-radius);
+  border-bottom-left-radius: var(--rdm-border-radius);
+}
+.rdm-button-group-fieldset .rdm-button:last-child:not(:first-child) {
+  border-top-right-radius: var(--rdm-border-radius);
+  border-bottom-right-radius: var(--rdm-border-radius);
+}
